@@ -23,8 +23,9 @@ This project is a full-stack AI support agent designed to automate customer serv
  Activate the Virtual Environment:
 
 PowerShell
+
     .\venv\Scripts\activate 
-Install Required Packages:
+    <!-- Install Required Packages: -->
 
 Bash
 
@@ -58,7 +59,9 @@ The frontend provides the interactive chat bubble interface.
 PowerShell
 
 In a new terminal tab
+
     streamlit run frontend.py
+    
 Access the chat interface at: http://localhost:8501
 
 # Prompt Engineering & Logic
