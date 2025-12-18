@@ -1,0 +1,27 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+
+# Environment Secrets
+.env
+.streamlit/secrets.toml
+
+# Databases & Vector Stores
+*.sqlite3
+*.sqlite
+*.db
+chroma_db/
+data/chroma_db/
+
+# Python Caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
