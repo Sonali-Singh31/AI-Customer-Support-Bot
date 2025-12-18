@@ -46,7 +46,7 @@ PowerShell
 # Running the Application
 You must keep two separate terminals running at the same time.
 
-1. Start the Backend (API)
+* Start the Backend (API)
 The backend manages the AI logic, vector search, and database.
 
 PowerShell
@@ -54,7 +54,7 @@ PowerShell
     uvicorn app.main:app --reload
 
 Once started, view the API documentation at: http://127.0.0.1:8000/docs
-2. Start the Frontend (UI)
+* Start the Frontend (UI)
 The frontend provides the interactive chat bubble interface.
 
 PowerShell
@@ -68,19 +68,19 @@ Access the chat interface at: http://localhost:8501
 # Prompt Engineering & Logic
 The bot follows a strict hierarchical reasoning process:
 
-FAQ Search: It first searches the faqs.json vector index.
+* FAQ Search: It first searches the faqs.json vector index.
 
-Contextual Memory: It retrieves the last few messages from sessions.db to understand the conversation flow.
+* Contextual Memory: It retrieves the last few messages from sessions.db to understand the conversation flow.
 
-Reasoning: If a match is found, it provides the answer. If no match is found, it uses general knowledge or triggers the Escalation Protocol.
+* Reasoning: If a match is found, it provides the answer. If no match is found, it uses general knowledge or triggers the Escalation Protocol.
 
-Next Steps: Every response is programmed to suggest a "Next Action" to guide the customer.
+* Next Steps: Every response is programmed to suggest a "Next Action" to guide the customer.
 
 # Maintenance
 If you update the faqs.json file:
 
-Stop the Backend (Ctrl+C).
+* Stop the Backend (Ctrl+C).
 
-Delete the data/chroma_db/ folder.
+* Delete the data/chroma_db/ folder.
 
-Restart the Backend; it will automatically re-index the new FAQs into the vector store.
+* Restart the Backend; it will automatically re-index the new FAQs into the vector store.
