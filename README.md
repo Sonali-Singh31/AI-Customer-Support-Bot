@@ -23,10 +23,8 @@ This project is a full-stack AI support agent designed to automate customer serv
  Activate the Virtual Environment:
 
 PowerShell
-
-Windows
     .\venv\Scripts\activate 
-    Install Required Packages:
+Install Required Packages:
 
 Bash
 
@@ -38,10 +36,9 @@ This project requires specific models to be available locally via Ollama. Run th
 
 PowerShell
 
-Pull the Llama3 model for text generation
+    <!-- Pull the Llama3 model for text generation -->
     ollama pull llama3
-
-Pull the mxbai embedding model for vector search
+    <!-- Pull the mxbai embedding model for vector search -->
     ollama pull mxbai-embed-large
 
 # Running the Application
@@ -50,7 +47,7 @@ You must keep two separate terminals running at the same time.
 1. Start the Backend (API)
 The backend manages the AI logic, vector search, and database.
 
-# PowerShell
+PowerShell
 
     uvicorn app.main:app --reload
 
@@ -60,7 +57,7 @@ The frontend provides the interactive chat bubble interface.
 
 PowerShell
 
-# In a new terminal tab
+In a new terminal tab
     streamlit run frontend.py
 Access the chat interface at: http://localhost:8501
 
