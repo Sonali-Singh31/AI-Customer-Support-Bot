@@ -24,13 +24,13 @@ This project is a full-stack AI support agent designed to automate customer serv
 
 PowerShell
 
-# Windows
-.\venv\Scripts\activate
-Install Required Packages:
+Windows
+    .\venv\Scripts\activate 
+    Install Required Packages:
 
-# Bash
+Bash
 
-pip install langchain-ollama langchain-community langchain-core chromadb fastapi uvicorn streamlit python-dotenv requests
+    pip install langchain-ollama langchain-community langchain-core chromadb fastapi uvicorn streamlit python-dotenv requests
 
 
 # Local Model Setup
@@ -38,31 +38,30 @@ This project requires specific models to be available locally via Ollama. Run th
 
 PowerShell
 
-# Pull the Llama3 model for text generation
-ollama pull llama3
+Pull the Llama3 model for text generation
+    ollama pull llama3
 
-# Pull the mxbai embedding model for vector search
-ollama pull mxbai-embed-large
+Pull the mxbai embedding model for vector search
+    ollama pull mxbai-embed-large
 
 # Running the Application
 You must keep two separate terminals running at the same time.
 
-# 1. Start the Backend (API)
+1. Start the Backend (API)
 The backend manages the AI logic, vector search, and database.
 
 # PowerShell
 
-uvicorn app.main:app --reload
+    uvicorn app.main:app --reload
 
 Once started, view the API documentation at: http://127.0.0.1:8000/docs
-
-# 2. Start the Frontend (UI)
+2. Start the Frontend (UI)
 The frontend provides the interactive chat bubble interface.
 
-# PowerShell
+PowerShell
 
 # In a new terminal tab
-streamlit run frontend.py
+    streamlit run frontend.py
 Access the chat interface at: http://localhost:8501
 
 # Prompt Engineering & Logic
